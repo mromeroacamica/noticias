@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Noticia = ({ noticia }) => {
     //extraer los datos
@@ -25,7 +27,7 @@ const Noticia = ({ noticia }) => {
                     <a
                         href={url}
                         target='_blank'
-                        rel='noopener norefrrer'
+                        rel='noopener noreferrer'
                         className='waves-effect waves-light btn'
                     >Ver noticia completa</a>
                 </div>
@@ -34,5 +36,10 @@ const Noticia = ({ noticia }) => {
         </div>
     );
 }
+
+
+Noticia.propTypes={
+    noticia:PropTypes.object.isRequired
+  };
 
 export default Noticia;
